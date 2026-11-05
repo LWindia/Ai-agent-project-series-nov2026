@@ -64,7 +64,7 @@ export default function Navigation() {
         </button>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           {NAV_LINKS.map((link) => (
             <button
               key={link.id}
@@ -95,7 +95,7 @@ export default function Navigation() {
             href={REGISTER_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group hidden items-center gap-2 rounded-full border-2 border-electric-500 bg-electric-500/10 px-6 py-2.5 text-[15px] font-semibold text-white shadow-[0_0_24px_-6px_rgba(139,92,246,0.8)] transition-all hover:bg-electric-500/25 hover:shadow-[0_0_32px_-4px_rgba(139,92,246,0.9)] sm:flex"
+            className="group hidden items-center gap-2 rounded-full border-2 border-electric-500 bg-electric-500/10 px-6 py-2.5 text-[15px] font-semibold text-white shadow-[0_0_24px_-6px_rgba(139,92,246,0.8)] transition-all hover:bg-electric-500/25 hover:shadow-[0_0_32px_-4px_rgba(139,92,246,0.9)] whitespace-nowrap sm:flex"
           >
             Register Now
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -103,7 +103,7 @@ export default function Navigation() {
 
           <button
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-electric-400/30 bg-ink-850/60 text-electric-200 md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-electric-400/30 bg-ink-850/60 text-electric-200 lg:hidden"
             aria-label="Toggle menu"
           >
             {open ? <X className="h-4.5 w-4.5" /> : <Menu className="h-4.5 w-4.5" />}
@@ -113,7 +113,7 @@ export default function Navigation() {
 
       {/* Mobile drawer */}
       <div
-        className={`overflow-hidden border-t border-electric-400/10 bg-ink-950/95 backdrop-blur-xl transition-[max-height,opacity] duration-400 md:hidden ${
+        className={`overflow-hidden border-t border-electric-400/10 bg-ink-950/95 backdrop-blur-xl transition-[max-height,opacity] duration-400 lg:hidden ${
           open ? 'max-h-[34rem] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

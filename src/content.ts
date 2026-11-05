@@ -17,6 +17,10 @@ export const REGISTER_URL = 'https://rzp.io/rzp/agenticai-project-nov';
  */
 export const CONTACT_ENDPOINT: string = import.meta.env.VITE_CONTACT_ENDPOINT ?? '';
 
+/** WhatsApp chat button (bottom-right). Number in international format, digits only. */
+export const WHATSAPP_NUMBER = '919772201449';
+export const WHATSAPP_MESSAGE = "Hi! I'm interested in the AI Agent Project Series (Nov 2026). Please share the details.";
+
 /** Program facts used in the FAQ — edit here. */
 export const PROGRAM = {
   start: 'November 2026',
