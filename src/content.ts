@@ -12,10 +12,10 @@ export const REGISTER_URL = 'https://rzp.io/rzp/agenticai-project-nov';
 
 /**
  * Google Apps Script web-app URL that saves the contact form into Google Sheets.
- * Deploy google-apps-script/Code.gs (see the README next to it) and paste the
- * "/exec" URL here.
+ * Set VITE_CONTACT_ENDPOINT in `.env` locally and in your hosting provider's
+ * environment variables (see `.env.example`).
  */
-export const CONTACT_ENDPOINT = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+export const CONTACT_ENDPOINT: string = import.meta.env.VITE_CONTACT_ENDPOINT ?? '';
 
 /** Program facts used in the FAQ — edit here. */
 export const PROGRAM = {

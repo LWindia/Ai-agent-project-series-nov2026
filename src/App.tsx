@@ -10,10 +10,14 @@ import Overview from '@/components/Overview';
 import Footer from '@/components/Footer';
 import Faq from '@/components/Faq';
 import ContactModal from '@/components/ContactModal';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import { useEffect } from 'react';
 import { useReveal } from '@/hooks/useReveal';
+import { trackOutboundClicks } from '@/lib/track';
 
 function App() {
   const ref = useReveal<HTMLDivElement>();
+  useEffect(() => trackOutboundClicks(), []);
 
   return (
     <div ref={ref} className="min-h-screen bg-ink-950 text-bone-50">
@@ -28,6 +32,7 @@ function App() {
         <Faq />
       </main>
       <Footer />
+      <WhatsAppButton />
       <ContactModal />
     </div>
   );

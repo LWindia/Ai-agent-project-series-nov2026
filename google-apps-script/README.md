@@ -7,7 +7,7 @@
    - Execute as: **Me**
    - Who has access: **Anyone**
 5. Click **Deploy**, approve the permissions, and copy the **Web app URL** (it ends in `/exec`).
-6. Paste that URL into `CONTACT_ENDPOINT` in `src/content.ts`.
+6. Set it as `VITE_CONTACT_ENDPOINT` in `.env` (and in your hosting provider's environment variables).
 7. Test: open the URL in a browser — you should see `{"ok":true,"status":"running"}`.
    Then submit the popup on the site; a row appears in the **Leads** tab.
 

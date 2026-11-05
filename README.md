@@ -20,7 +20,7 @@ Most text and settings live in `src/content.ts`:
 | Setting | What it does |
 | --- | --- |
 | `REGISTER_URL` | Razorpay registration link used by every **Register Now** button |
-| `CONTACT_ENDPOINT` | Google Apps Script web-app URL that saves the contact form |
+| `CONTACT_ENDPOINT` | Reads `VITE_CONTACT_ENDPOINT` (Apps Script URL that saves the contact form) |
 | `PROGRAM` | Start month and recording-access days shown in the FAQ |
 | `FAQS` | FAQ questions and answers |
 
@@ -28,4 +28,4 @@ The contact popup opens automatically after ~2.5 screens of scrolling (once per 
 
 ## Contact form → Google Sheets
 
-The Apps Script code and setup steps are in [`google-apps-script/`](google-apps-script/README.md). Deploy it as a web app, then paste the `/exec` URL into `CONTACT_ENDPOINT`.
+The Apps Script code and setup steps are in [`google-apps-script/`](google-apps-script/README.md). Deploy it as a web app, then set the `/exec` URL as the `VITE_CONTACT_ENDPOINT` environment variable — in `.env` locally (copy `.env.example`) and in your hosting provider's environment settings.

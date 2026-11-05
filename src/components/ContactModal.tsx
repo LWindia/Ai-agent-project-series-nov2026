@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 import { ArrowRight, CheckCircle2, Loader2, Mail, MessageCircle, User, X } from 'lucide-react';
 import { CONTACT_ENDPOINT, REGISTER_URL } from '@/content';
+import { track } from '@/lib/track';
 
 /** Open the contact popup from anywhere: `openContact('hero')`. */
 export function openContact(source = 'site') {
@@ -100,7 +101,7 @@ export default function ContactModal() {
     }
     if (!CONTACT_ENDPOINT.startsWith('https://script.google.com/')) {
       setStatus('error');
-      setError('The form is not connected yet. Add your Apps Script URL in src/content.ts.');
+      setError('The form is not connected yet. Set VITE_CONTACT_ENDPOINT to your Apps Script URL.');
       return;
     }
 
@@ -119,6 +120,7 @@ export default function ContactModal() {
       const data = await res.json().catch(() => ({ ok: res.ok }));
       if (!data.ok) throw new Error(data.error || 'Submission failed');
       store('set', 'local', SUBMITTED_KEY);
+          track('Lead', { content_name: 'Contact form', source });
       setStatus('done');
     } catch (err) {
       // Some browsers block reading the Apps Script redirect; send once more without reading the reply.
@@ -126,6 +128,7 @@ export default function ContactModal() {
         try {
           await fetch(CONTACT_ENDPOINT, { method: 'POST', body, mode: 'no-cors' });
           store('set', 'local', SUBMITTED_KEY);
+          track('Lead', { content_name: 'Contact form', source });
           setStatus('done');
           return;
         } catch {
