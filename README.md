@@ -1,4 +1,4 @@
-# AI Agent Project Series — Nov 2026
+1.# AI Agent Project Series — Nov 2026
 
 Landing page for LinuxWorld's **AI Agent Project Series**: a live, hands-on program building three real-world AI agents — **KubeDoctor AI** (Kubernetes troubleshooting), **CloudSentinel AI** (AWS cloud security) and **AIOps Pulse** (infrastructure monitoring).
 
