@@ -53,13 +53,8 @@ export default function Navigation() {
             className="h-10 w-auto sm:h-11"
           />
           <span aria-hidden className="mx-1 h-8 w-px bg-white/15 sm:mx-1.5" />
-          <span className="flex flex-col items-start leading-none">
-            <span className="font-display text-[18px] font-semibold tracking-[-0.03em] text-bone-50 sm:text-[22px]">
-              Agent Series
-            </span>
-            <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-bone-200">
-              Est. MMXXVI
-            </span>
+          <span className="whitespace-nowrap font-display text-[18px] font-semibold leading-none tracking-[-0.03em] text-bone-50 sm:text-[22px]">
+            AI Agent Series
           </span>
         </button>
 
