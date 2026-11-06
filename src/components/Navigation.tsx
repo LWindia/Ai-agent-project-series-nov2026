@@ -59,7 +59,7 @@ export default function Navigation() {
         </button>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           {NAV_LINKS.map((link) => (
             <button
               key={link.id}
@@ -82,7 +82,7 @@ export default function Navigation() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => openContact('nav')}
-            className="hidden px-3 py-2 text-[15px] font-medium text-bone-100 transition-colors hover:text-white lg:block"
+            className="hidden px-3 py-2 text-[15px] font-medium text-bone-100 transition-colors hover:text-white xl:block"
           >
             Contact Us
           </button>
@@ -98,7 +98,7 @@ export default function Navigation() {
 
           <button
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-electric-400/30 bg-ink-850/60 text-electric-200 lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-electric-400/30 bg-ink-850/60 text-electric-200 xl:hidden"
             aria-label="Toggle menu"
           >
             {open ? <X className="h-4.5 w-4.5" /> : <Menu className="h-4.5 w-4.5" />}
@@ -108,7 +108,7 @@ export default function Navigation() {
 
       {/* Mobile drawer */}
       <div
-        className={`overflow-hidden border-t border-electric-400/10 bg-ink-950/95 backdrop-blur-xl transition-[max-height,opacity] duration-400 lg:hidden ${
+        className={`overflow-hidden border-t border-electric-400/10 bg-ink-950/95 backdrop-blur-xl transition-[max-height,opacity] duration-400 xl:hidden ${
           open ? 'max-h-[34rem] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

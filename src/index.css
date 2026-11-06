@@ -296,3 +296,18 @@ body::after {
     opacity: 1;
   }
 }
+
+/* Diwali string lights */
+.diwali-light {
+  filter: drop-shadow(0 0 4px rgba(251, 191, 92, 0.9));
+  animation: diwaliTwinkle 2.1s ease-in-out infinite;
+}
+@keyframes diwaliTwinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}

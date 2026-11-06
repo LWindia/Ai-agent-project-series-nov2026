@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { id: 'projects', label: 'Projects' },
   { id: 'technology', label: 'Technology' },
   { id: 'overview', label: 'Overview' },
+  { id: 'pricing', label: 'Pricing' },
   { id: 'faq', label: 'FAQ' },
 ] as const;
 
@@ -20,6 +21,13 @@ export const CONTACT_ENDPOINT: string = import.meta.env.VITE_CONTACT_ENDPOINT ??
 /** WhatsApp chat button (bottom-right). Number in international format, digits only. */
 export const WHATSAPP_NUMBER = '919772201449';
 export const WHATSAPP_MESSAGE = "Hi! I'm interested in the AI Agent Project Series (Nov 2026). Please share the details.";
+
+/** Pricing — Diwali bundle offer. Amounts in INR. */
+export const PRICING = {
+  offerName: 'Diwali Bundle Offer',
+  price: 3000,
+  originalPrice: 10000,
+};
 
 /** Program facts used in the FAQ — edit here. */
 export const PROGRAM = {
@@ -51,6 +59,10 @@ export const FAQS: { q: string; a: string }[] = [
   {
     q: 'Who is this program for?',
     a: 'DevOps engineers, cloud and SRE engineers, system administrators and students who want to apply AI agents to real IT operations. Basic familiarity with Linux and Python helps you get the most out of the sessions.',
+  },
+  {
+    q: 'How much does the program cost?',
+    a: 'As part of our Diwali Bundle Offer, the complete series — all three AI agent projects, live hands-on sessions and 365-day LMS access to recordings — is available for ₹3,000 instead of ₹10,000. This is a limited-period offer.',
   },
   {
     q: 'How do I register?',

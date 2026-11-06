@@ -9,6 +9,7 @@ import Comparison from '@/components/Comparison';
 import Overview from '@/components/Overview';
 import Footer from '@/components/Footer';
 import Faq from '@/components/Faq';
+import Pricing from '@/components/Pricing';
 import ContactModal from '@/components/ContactModal';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { useEffect } from 'react';
@@ -29,6 +30,7 @@ function App() {
         <Roadmap />
         <Comparison />
         <Overview />
+        <Pricing />
         <Faq />
       </main>
       <Footer />
